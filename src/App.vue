@@ -2,27 +2,36 @@
   <el-container>
     <el-header>导航</el-header>
     <el-main>内容（路由）</el-main>
-    <el-footer height="100px">注脚</el-footer>
+    <el-footer height="200px">
+      <myfooter />
+    </el-footer>
   </el-container>
+  
 </template>
 
 <script>
+// 引入自定义footer组件
+import myfooter from "@/components/Myfooter"
+
 export default {
   name: "App",
+  components: {myfooter}
 };
 </script>
 
-<style scoped>
+<style scoped >
 .el-header,
 .el-footer {
-  background-color: #67c23a;
+  /* background-color: #67c23a; */
+    background-color: #e1f3d8;
+
   color: #333;
   text-align: center;
   line-height: 60px;
 }
 
 .el-main {
-  background-color: #e1f3d8;
+  /* background-color: #67c23a; */
   color: #333;
   text-align: center;
   line-height: 160px;
